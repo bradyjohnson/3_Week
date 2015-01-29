@@ -15,24 +15,35 @@ and what you should write is the favNum function that makes the code above work,
    });
 */
 
-//Code Here for first
 
+
+
+
+
+//Code Here for first
+var first = function(arr, cb){
+    cb(arr[0]);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 first(names, function(firstName){
-  console.log('The first name in names is ', firstName)
+  console.log('The first name in names is', firstName)
 });
 
 
 
+
+
+
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
-
-  //Code Here for last
+//Code Here for last
+var last = function(arr, cb){
+  cb(arr[arr.length -1]);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 last(names, function(lastName){
   console.log('The last name in names is ', lastName);
 });
@@ -41,32 +52,35 @@ last(names, function(lastName){
 
 
 
+
+
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
-
-
-
-  //Code Here for multiply
+//Code Here for multiply
+var multiply = function(stra, strb, cb){
+  cb(stra*strb());
+};
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
-})
+});
+
 
 
 
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
+//Code Here for contains
+var contains = function(arr, cb){
+  for(var i = 0; i < arr.length; i++) {
+  }
+  cb();
+};
 
 
-
-
-
-  //Code Here for contains
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 contains(names, 'Colt', function(result){
   if(result === true){
     console.log('Colt is in the array');
@@ -80,27 +94,30 @@ contains(names, 'Colt', function(result){
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
-
-    //Code Here for uniq
+//Code Here for uniq
+var uniq = function(arr, cb){
+  arr.filter(function(elem, pos) {
+    return arr.indexOf(elem) == pos;
+  });
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 
 
 
+var duplicatesArray = ['mike','james','james','alex'];
+
+var uniqueArray = duplicatesArray.filter(function(elem, pos) {
+  return duplicatesArray.indexOf(elem) == pos;
+});
+
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
-
-
-
-
-    //Code Here for each
+//Code Here for each
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
@@ -118,6 +135,10 @@ each(names, function(item, indice){
 
 
  //code here for getUserById
+var getUserById = function(arr, cb){
+  cb(arr.filter(id === '16t'))
+};
+
 
 var users = [
   {
@@ -137,7 +158,7 @@ var users = [
     email: 'ryan@gmail.com',
     name: 'Ryan',
     address: '192 East 32 North'
-  },
+  }
 ];
 
 getUserById(users, '16t', function(user){
