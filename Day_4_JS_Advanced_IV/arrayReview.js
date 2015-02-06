@@ -1,22 +1,56 @@
 var threeItems = [1,2,3];
 //create a function named 'last' that returns the last item from 'threeItems'
 //alert the result of your function
-
-  //code here
-
+//code here
+var last = function(){
+  alert(threeItems[length]);
+};
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
 
-//Loop through evenArray removing all values that aren't even 
+
+
+
+
+
+
+
+//Loop through evenArray removing all values that aren't even
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
+//code here
+var getEvenNumbers = function(passedArray) {
+  for (var i = 0; i < passedArray.length; i++) {
 
-  //code here
+    // If the remainder of the current number in the array is equal to one, the number is odd so remove it from the array.
+    if ((passedArray[i] % 2) === 1) {
+      evenArray.splice(i, 1);
+      if ((passedArray[i] % 2) != 1) { // if its even, add it
+        evenArray.push(passedArray[i]);
+    }
+  }
+
+  // Return the array with only even numbers left.
+  return passedArray;
+}
+
+// Call the function and store the results.
+var evenNumbers = getEvenNumbers(evenArray);
+
+// Alert the new array that only has even numbers.
+alert(evenNumbers);
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+
+
+
+
+
+
+
 
 
 
@@ -25,11 +59,20 @@ var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+//code here
 
-  //code here
+
+
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+
+
+
+
+
+
+
 
 
 
@@ -48,6 +91,13 @@ alert(second) //[1,2,3,4,5,6,7];
 
 
 
+
+
+
+
+
+
+
 //write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
 var sentence = "Dev Mountain is the best"
 
@@ -55,6 +105,13 @@ var sentence = "Dev Mountain is the best"
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+
+
+
+
+
+
+
 
 
 
@@ -67,6 +124,13 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
+
+
+
+
+
+
+
 
 
 

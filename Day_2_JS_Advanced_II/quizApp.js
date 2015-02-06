@@ -4,28 +4,45 @@
 //also going to be creating lots of Question objects. Those would make two perfectly good constructors. 
 
 //Create a User constructor that accepts name, email, password, and totalScore parameters and set them appropriatly
+//code here
+var User = function(name, email, password, totalScore){
+  this.name = name;
+  this.email = email;
+  this.password = password;
+  this.totalScore = totalScore;
+};
 
-  //code here
+var users = [];
+users.push
+
+var Question = function(title, answerArray, rightAnswer, difficulty){
+  this.title = title;
+  this.answerArray = answerArray;
+  this.rightAnswer = rightAnswer;
+  this.difficulty = difficulty;
+}
+
+var questions = [];
+
+questions.push(new Question('T/F', [true, false], true, 'easy'));
+
+var myArray = ['Brady', 'test']
 
 
 //Create a Question constructor that accepts title, answersArray, rightAnswer, and difficulty parameters
-
-  //code here
+//code here
 
 
 //Create a users Array which is going to hold all of our users.
-
-  //code here
+//code here
 
 
 //Let's say three people signed up for our service, create 3 instances of User and add each to the users Array
-
-  //code here
+//code here
 
 
 //Create a questions Array which is going to hold all of our questions
-
-  //code here
+//code here
 
 
 //Now, let's say we wanted to create a quiz about JavaScript. Create three instances of Question which contain the following data
@@ -33,16 +50,13 @@
 //title: 'T/F: JavaScript is just a scripting version of Java'
 //title: "T/F: In Javascript, == doesn't check 'type' but just the value - where === checks type and value"
 //Fill in the rest of the required data as you see appropriate.
-
-  //code here
+//code here
 
 
 //Now push all of your instances of Question into the questions Array
-
-  //code here
+//code here
 
 console.log('My users Array and my questions arrray are ...');
 //Now loop console.log your users array and your questions array and verify that they're both holding the right data.
-
-  //code here
+//code here
 

@@ -135,32 +135,60 @@ each(names, function(item, indice){
 
 
  //code here for getUserById
-var getUserById = function(arr, cb){
-  cb(arr.filter(id === '16t'))
-};
+  var getUserById = function(arr, cb){
+    cb(arr.filter(id === '16t'))
+  };
+
+  var users = [
+    {
+      id: '12d',
+      email: 'tyler@gmail.com',
+      name: 'Tyler',
+      address: '167 East 500 North'
+    },
+    {
+      id: '15a',
+      email: 'cahlan@gmail.com',
+      name: 'Cahlan',
+      address: '135 East 320 North'
+    },
+    {
+      id: '16t',
+      email: 'ryan@gmail.com',
+      name: 'Ryan',
+      address: '192 East 32 North'
+    }
+  ];
+
+  var getUserById = function(usersArray, id, callbackFunction){
+    for(var i = 0; i < usersArray.length; i++) {
+      if (usersArray[i].id === id) {
+        callbackFunction(usersArray[i]);
+      }
+    }
+  };
+
+  getUserById(users, '16t', function(user){
+    console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address);
+  });
 
 
-var users = [
-  {
-    id: '12d',
-    email: 'tyler@gmail.com',
-    name: 'Tyler',
-    address: '167 East 500 North'
-  },
-  {
-    id: '15a',
-    email: 'cahlan@gmail.com',
-    name: 'Cahlan',
-    address: '135 East 320 North'
-  },
-  {
-    id: '16t',
-    email: 'ryan@gmail.com',
-    name: 'Ryan',
-    address: '192 East 32 North'
-  }
-];
 
-getUserById(users, '16t', function(user){
-  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
-});
+  var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
+  var uniq = function(namesArray, callbackFunction){
+    var uniqueObject = {};
+    var returnArray = [];
+    for (var i = 0; i < namesArray.length; i++) {
+      uniqueObject[namesArray[i]] = null;
+    }
+    for (var key in uniqueObject) {
+      returnArray.push(key);
+    }
+    callbackFunction(returnArray);
+  };
+
+
+  uniq(names, function(uniqArr){
+    console.log('The new names array is', uniqArr);
+  });
